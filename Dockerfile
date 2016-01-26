@@ -10,4 +10,4 @@ RUN apt-get update -y && \
         libxml2-dev \
         && \
     apt-get clean -y && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* /etc/mysql
