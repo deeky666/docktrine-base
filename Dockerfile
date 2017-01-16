@@ -13,6 +13,9 @@ RUN apt-get update -y && \
         msodbcsql \
         unixodbc-dev-utf16\
 
+        # Workaround for: https://bugs.php.net/bug.php?id=48614
+        libsqlite3-dev \
+
         libaio1 \
         libmysqlclient-dev \
         libpq-dev \
