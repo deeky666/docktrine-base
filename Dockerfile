@@ -7,10 +7,10 @@ RUN apt-get update -y && \
     wget -O - http://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     echo "deb [arch=amd64] http://packages.microsoft.com/ubuntu/16.04/prod xenial main" > /etc/apt/sources.list.d/mssql-release.list && \
     apt-get update -y && \
-    ACCEPT_EULA=Y apt-get install -y --no-install-recommends \
+    ACCEPT_EULA=Y apt-get install -y --no-install-recommends msodbcsql && \ # Microsoft SQL Server client libraries
+    apt-get install -y --no-install-recommends
         # Microsoft SQL Server client libraries
         locales \
-        msodbcsql \
         unixodbc-dev-utf16\
 
         # MariaDB server libraries
