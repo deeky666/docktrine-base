@@ -13,6 +13,10 @@ RUN apt-get update -y && \
         msodbcsql \
         unixodbc-dev-utf16\
 
+        # MariaDB server libraries
+        libwrap0-dev \
+        libjemalloc-dev \
+
         # Workaround for: https://bugs.php.net/bug.php?id=48614
         libsqlite3-dev \
 
